@@ -2,7 +2,7 @@ import { useRecoilState, useRecoilValue, useResetRecoilState } from "recoil";
 import "./Sources.css";
 import { currentPageAtom, currentSourceAtom } from "../state";
 import SourceViewer from "./SourceViewer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface Source {
   title: string;
@@ -16,43 +16,58 @@ export default function Sources() {
   const clearPageState = useResetRecoilState(currentPageAtom);
 
   const [sources, setSources] = useState<Source[]>([]);
-  fetch("datas.json").then(async (result) => {
-    if (result.ok) {
-      setSources(await result.json());
-    }
-  });
+  useEffect(() => {
+    fetch("datas.json").then(async (result) => {
+      if (result.ok && !sources.length) {
+        setSources(await result.json());
+      }
+    });
+  }, []);
 
   return (
     <>
-      <SourceViewer />
       <div
         id="sources-pane"
         className={currentPage === "sources" ? "active" : "offscreen"}
       >
-        <button
-          id="sources-back-button"
-          className="navigation-button"
-          onClick={() => {
-            clearPageState();
-            clearSourceState();
-          }}
-        >
-          {"<"}
-        </button>
-        <div id="sources-list">
-          {sources.map((source) => (
+        <div id="sources-wrapper">
+          <button
+            id="sources-back-button"
+            className="navigation-button"
+            onClick={() => {
+              clearPageState();
+              clearSourceState();
+            }}
+          >
+            {"<"}
+          </button>
+          <div id="sources-list">
+            {sources.map((source) => (
+              <button
+                key={source.title}
+                className={
+                  "navigation-button source" +
+                  (currentSource === source.source ? " active" : "")
+                }
+                onClick={() => setCurrentSource(source.source)}
+              >
+                {source.title}
+              </button>
+            ))}
             <button
+              key={"attributions"}
               className={
                 "navigation-button source" +
-                (currentSource === source.source ? " active" : "")
+                (currentSource === "attributions" ? " active" : "")
               }
-              onClick={() => setCurrentSource(source.source)}
+              onClick={() => setCurrentSource("attributions.html")}
             >
-              {source.title}
+              attributions
             </button>
-          ))}
+          </div>
         </div>
       </div>
+      <SourceViewer />
     </>
   );
 }

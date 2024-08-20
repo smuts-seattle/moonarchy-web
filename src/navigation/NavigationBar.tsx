@@ -17,7 +17,7 @@ export default function NavigationBar() {
           }
           onClick={() => setCurrentPage("sources")}
         >
-          Sources
+          Data
         </button>
         <button
           className={

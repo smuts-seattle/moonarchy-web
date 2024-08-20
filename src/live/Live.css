@@ -18,6 +18,20 @@
   right: 0;
 }
 
+@media (max-width: 900px) {
+  #live-pane {
+    width: 100%;
+  }
+
+  #live-pane.offscreen {
+    right: -100%;
+  }
+
+  #live-pane.active {
+    right: 0;
+  }
+}
+
 #events-list {
   display: flex;
   flex-grow: 1;
@@ -33,4 +47,6 @@
   align-self: end;
   margin: 0;
   padding-right: 40px;
+  min-width: 100%;
+  width: 100%;
 }

@@ -1,3 +1,4 @@
+import "./Moon.css";
 import moonTexture from "../assets/moon_texture.jpg";
 import flowersTexture from "../assets/flowers_texture.jpg";
 import microscopeTexture from "../assets/microscope_texture.jpg";
@@ -8,40 +9,7 @@ export default function Moon() {
   const currentPage = useRecoilValue(currentPageAtom);
 
   return (
-    <svg
-      style={{
-        position: "absolute",
-        margin: "auto",
-        transition: "right 2s, left 2s, height 2s, width 2s, bottom 2s",
-        zIndex: -2,
-        ...(currentPage === ""
-          ? {
-              height: "90%",
-              width: "90%",
-              left: 0,
-              right: 0,
-              bottom: 0,
-            }
-          : currentPage === "sources"
-          ? {
-              height: "180%",
-              width: "180%",
-              left: 0,
-              right: "-100%",
-              bottom: "-40%",
-            }
-          : currentPage === "live"
-          ? {
-              height: "180%",
-              width: "180%",
-              left: "-100%",
-              right: 0,
-              bottom: "-40%",
-            }
-          : {}),
-      }}
-      viewBox="0 0 100 100"
-    >
+    <svg id="moon-background" className={currentPage} viewBox="5 5 90 90">
       <defs>
         <pattern
           id="moon-texture"
@@ -110,7 +78,6 @@ export default function Moon() {
                 31.840380010418123 89.5075336238055,
                 43.74262139839075"
         >
-          {" "}
           <animateTransform
             attributeName="transform"
             type="rotate"

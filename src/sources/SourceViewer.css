@@ -4,7 +4,39 @@
   bottom: 5%;
   right: 5%;
   left: 35%;
+  min-width: 300px;
+  margin-left: auto;
   background-color: #000000aa;
+}
+
+@media (max-width: 900px) {
+  #source-viewer {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    background-color: #000000aa;
+  }
+}
+
+#sources-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#close-source-viewer-button {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  line-height: normal;
+  z-index: 10;
 }
 
 .source-view {
