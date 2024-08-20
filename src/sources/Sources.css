@@ -1,0 +1,39 @@
+#sources-pane {
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  background-color: #00000044;
+  display: flex;
+  flex-direction: column;
+  left: -30%;
+  transition: left 1.5s;
+}
+
+#sources-pane.offscreen {
+  left: -30%;
+}
+
+#sources-pane.active {
+  left: 0;
+}
+
+#sources-list {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+#sources-back-button {
+  text-align: left;
+  margin: 0;
+  padding-left: 40px;
+}
+
+.source {
+  width: 100%;
+  margin: 10px 0;
+  padding: 0 40px;
+  text-align: left;
+  font-size: large;
+}

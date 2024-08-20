@@ -1,0 +1,36 @@
+#live-pane {
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  background-color: #00000044;
+  display: flex;
+  flex-direction: column;
+  right: -30%;
+  transition: right 1.5s;
+}
+
+#live-pane.offscreen {
+  right: -30%;
+}
+
+#live-pane.active {
+  right: 0;
+}
+
+#events-list {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  color: #e7ecb2;
+  font-size: x-large;
+  font-weight: bold;
+  align-items: center;
+}
+
+#live-back-button {
+  text-align: right;
+  align-self: end;
+  margin: 0;
+  padding-right: 40px;
+}

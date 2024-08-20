@@ -1,0 +1,14 @@
+#source-viewer {
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  right: 5%;
+  left: 35%;
+  background-color: #000000aa;
+}
+
+.source-view {
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+}
