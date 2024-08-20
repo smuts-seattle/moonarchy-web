@@ -53,6 +53,7 @@ export default function Moon() {
       </defs>
       <mask id="surface-mask">
         <polygon
+          id="surface-polygon"
           stroke="white"
           strokeWidth="5"
           fill="transparent"
@@ -77,19 +78,11 @@ export default function Moon() {
                 21.71572875253809 85.64026096753472,
                 31.840380010418123 89.5075336238055,
                 43.74262139839075"
-        >
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="60s"
-            repeatCount="indefinite"
-          />
-        </polygon>
+        ></polygon>
       </mask>
       <mask id="inner-mask">
         <polygon
+          id="inner-polygon"
           stroke="white"
           strokeWidth="4"
           fill="black"
@@ -103,19 +96,11 @@ export default function Moon() {
               20 67.6335575687742,
               25.729490168751575 78.53169548885461,
               40.72949016875157"
-        >
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="120s"
-            repeatCount="indefinite"
-          />
-        </polygon>
+        ></polygon>
       </mask>
       <mask id="core-mask">
         <polygon
+          id="core-polygon"
           stroke="white"
           strokeWidth="3"
           fill="black"
@@ -128,16 +113,7 @@ export default function Moon() {
               31.52240934977427 57.6536686473018,
               31.522409349774268 68.47759065022572,
               42.34633135269819"
-        >
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            from="0 50 50"
-            to="360 50 50"
-            dur="180s"
-            repeatCount="indefinite"
-          />
-        </polygon>
+        ></polygon>
       </mask>
 
       <circle

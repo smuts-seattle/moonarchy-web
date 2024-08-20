@@ -45,3 +45,24 @@
     bottom: -40vh;
   }
 }
+
+#surface-polygon {
+  animation: spin 60s linear infinite;
+  transform-origin: 50px 50px;
+}
+
+#inner-polygon {
+  animation: spin 120s linear infinite;
+  transform-origin: 50px 50px;
+}
+
+#core-polygon {
+  animation: spin 180s linear infinite;
+  transform-origin: 50px 50px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
