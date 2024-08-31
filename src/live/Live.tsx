@@ -24,6 +24,8 @@ export default function Live() {
           <br />
           September 20th
           <br />
+          Casa Del Xolo
+          <br />
           Details TBA
         </p>
       </div>
