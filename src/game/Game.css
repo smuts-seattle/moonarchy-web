@@ -1,0 +1,79 @@
+#game-pane {
+  position: absolute;
+  height: 30%;
+  left: 0;
+  right: 0;
+  background-color: #00000044;
+  display: flex;
+  flex-direction: column;
+  transition: bottom 1.5s;
+}
+
+#game-pane.offscreen {
+  bottom: -30%;
+}
+
+#game-pane.active {
+  bottom: 0;
+}
+
+@media (max-width: 900px) {
+  #game-pane {
+    height: 100%;
+  }
+
+  #game-pane.offscreen {
+    bottom: -100%;
+  }
+
+  #game-pane.active {
+    bottom: 0;
+  }
+}
+
+#game-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#game-list {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+#game-back-button {
+  text-align: left;
+  margin: 0;
+  padding-left: 40px;
+  min-width: 100%;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+}
+
+#save-as-hint {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  #save-as-hint {
+    display: none;
+  }
+}
+
+.navigation-button.gamedoc {
+  min-width: 100%;
+  margin: 10px 0;
+  padding: 0 40px;
+  text-align: left;
+  font-size: large;
+  line-height: normal;
+  height: 60px;
+}

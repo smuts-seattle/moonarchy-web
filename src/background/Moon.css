@@ -23,6 +23,13 @@
   bottom: -85vh;
 }
 
+#moon-background.game {
+  height: 200vh;
+  width: 200vh;
+  right: calc((100vw - 200vh) / 2);
+  bottom: 30vh;
+}
+
 @media (max-width: 1024px) {
   #moon-background {
     height: 200vh;
@@ -43,6 +50,13 @@
     width: 200vh;
     right: 10vw;
     bottom: -40vh;
+  }
+
+  #moon-background.game {
+    height: 200vh;
+    width: 200vh;
+    right: calc((200vh - 100vw) / -2);
+    bottom: 20vh;
   }
 }
 

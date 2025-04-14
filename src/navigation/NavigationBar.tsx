@@ -27,6 +27,14 @@ export default function NavigationBar() {
         >
           Live
         </button>
+        <button
+          className={
+            "navigation-button" + (currentPage === "game" ? " active" : "")
+          }
+          onClick={() => setCurrentPage("game")}
+        >
+          Game
+        </button>
         <a className="navigation-button" href="https://moonarchy.bandcamp.com/">
           Bandcamp
         </a>

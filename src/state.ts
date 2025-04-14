@@ -2,7 +2,7 @@ import { literal, string, stringLiterals, union } from "@recoiljs/refine";
 import { atom } from "recoil";
 import { urlSyncEffect } from "recoil-sync";
 
-export type Page = "" | "sources" | "live";
+export type Page = "" | "sources" | "live" | "game";
 
 export const currentPageAtom = atom<Page>({
   key: "p",
@@ -14,6 +14,7 @@ export const currentPageAtom = atom<Page>({
         "": "",
         sources: "sources",
         live: "live",
+        game: "game",
       }),
     }),
   ],

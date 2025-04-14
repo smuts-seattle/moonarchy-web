@@ -19,15 +19,7 @@ export default function Live() {
         {">"}
       </button>
       <div id="events-list">
-        <p>
-          Upcoming
-          <br />
-          September 20th
-          <br />
-          Casa Del Xolo
-          <br />
-          Details TBA
-        </p>
+        <p>[no upcoming events]</p>
       </div>
     </div>
   );
