@@ -1,33 +1,25 @@
 #moon-background {
   position: absolute;
   margin: auto;
-  transition: right 2s, left 2s, height 2s, width 2s, bottom 2s;
   z-index: -2;
   height: 90vh;
   width: 90vh;
   right: calc((100vw - 90vh) / 2);
   bottom: calc(10vh - 100px);
+  transition: transform 2s;
+  transform: scale(1) translate(0);
 }
 
 #moon-background.sources {
-  height: 270vh;
-  width: 270vh;
-  right: calc(-270vh + 60vw);
-  bottom: -85vh;
+  transform: scale(3) translate(40vh, 0);
 }
 
 #moon-background.live {
-  height: 270vh;
-  width: 270vh;
-  right: 40vw;
-  bottom: -85vh;
+  transform: scale(3) translate(-40vh, 0);
 }
 
 #moon-background.game {
-  height: 200vh;
-  width: 200vh;
-  right: calc((100vw - 200vh) / 2);
-  bottom: 30vh;
+  transform: scale(3) translate(0, -40vh);
 }
 
 @media (max-width: 1024px) {
@@ -39,44 +31,35 @@
   }
 
   #moon-background.sources {
-    height: 200vh;
-    width: 200vh;
-    right: calc(-200vh + 90vw);
-    bottom: -40vh;
+    transform: scale(1) translate(80vh, -80vh);
   }
 
   #moon-background.live {
-    height: 200vh;
-    width: 200vh;
-    right: 10vw;
-    bottom: -40vh;
+    transform: scale(1) translate(-80vh, -80vh);
   }
 
   #moon-background.game {
-    height: 200vh;
-    width: 200vh;
-    right: calc((200vh - 100vw) / -2);
-    bottom: 20vh;
+    transform: scale(1) translate(0, -160vh);
   }
 }
 
 #surface-polygon {
-  animation: spin 60s infinite steps(600, end);
+  animation: spin 60s infinite steps(600);
   transform-origin: 50px 50px;
 }
 
 #inner-polygon {
-  animation: spin 120s infinite steps(1200, end);
+  animation: spin 120s infinite steps(1200);
   transform-origin: 50px 50px;
 }
 
 #core-polygon {
-  animation: spin 180s infinite steps(1800, end);
+  animation: spin 180s infinite steps(1800);
   transform-origin: 50px 50px;
 }
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg) translateZ(0);
+    transform: rotate(360deg);
   }
 }

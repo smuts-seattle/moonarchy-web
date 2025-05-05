@@ -6,28 +6,23 @@
   background-color: #00000044;
   display: flex;
   flex-direction: column;
-  transition: left 1.5s;
-}
-
-#sources-pane.offscreen {
   left: -30%;
 }
 
+#sources-pane.offscreen {
+  transform: translate(0);
+  transition: transform 1.5s;
+}
+
 #sources-pane.active {
-  left: 0;
+  transform: translate(100%);
+  transition: transform 1.5s 0.5s;
 }
 
 @media (max-width: 900px) {
   #sources-pane {
     width: 100%;
-  }
-
-  #sources-pane.offscreen {
     left: -100%;
-  }
-
-  #sources-pane.active {
-    left: 0;
   }
 }
 

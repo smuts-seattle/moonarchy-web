@@ -7,28 +7,22 @@
   display: flex;
   flex-direction: column;
   right: -30%;
-  transition: right 1.5s;
 }
 
 #live-pane.offscreen {
-  right: -30%;
+  transform: translate(0);
+  transition: transform 1.5s;
 }
 
 #live-pane.active {
-  right: 0;
+  transform: translate(-100%);
+  transition: transform 1.5s 0.5s;
 }
 
 @media (max-width: 900px) {
   #live-pane {
     width: 100%;
-  }
-
-  #live-pane.offscreen {
     right: -100%;
-  }
-
-  #live-pane.active {
-    right: 0;
   }
 }
 
