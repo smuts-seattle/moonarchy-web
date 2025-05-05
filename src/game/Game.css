@@ -76,4 +76,5 @@
   font-size: large;
   line-height: normal;
   height: 60px;
+  box-sizing: border-box;
 }

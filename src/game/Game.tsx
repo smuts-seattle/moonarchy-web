@@ -1,7 +1,6 @@
-import { useRecoilState, useRecoilValue, useResetRecoilState } from "recoil";
+import { useRecoilValue, useResetRecoilState } from "recoil";
 import "./Game.css";
-import { currentPageAtom, currentSourceAtom } from "../state";
-import { useEffect, useState } from "react";
+import { currentPageAtom } from "../state";
 
 export default function Sources() {
   const currentPage = useRecoilValue(currentPageAtom);

@@ -61,22 +61,22 @@
 }
 
 #surface-polygon {
-  animation: spin 60s linear infinite;
+  animation: spin 60s infinite steps(600, end);
   transform-origin: 50px 50px;
 }
 
 #inner-polygon {
-  animation: spin 120s linear infinite;
+  animation: spin 120s infinite steps(1200, end);
   transform-origin: 50px 50px;
 }
 
 #core-polygon {
-  animation: spin 180s linear infinite;
+  animation: spin 180s infinite steps(1800, end);
   transform-origin: 50px 50px;
 }
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translateZ(0);
   }
 }
